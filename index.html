@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#667eea,#764ba2);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.container{
+    background:#fff;
+    width:100%;
+    max-width:700px;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+h2{
+    text-align:center;
+    margin-bottom:25px;
+    color:#333;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.full-width{
+    grid-column:1/3;
+}
+
+label{
+    display:block;
+    margin-bottom:5px;
+    font-weight:600;
+    color:#444;
+}
+
+input,
+textarea,
+select{
+    width:100%;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:14px;
+}
+
+textarea{
+    resize:vertical;
+    min-height:90px;
+}
+
+button{
+    width:100%;
+    background:#667eea;
+    color:white;
+    border:none;
+    padding:14px;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#5563d6;
+}
+
+@media(max-width:768px){
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .full-width{
+        grid-column:auto;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Lead Registration Form</h2>
+
+```
+<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Dbn00000ohwlV" method="POST">
+
+    <input type="hidden" name="oid" value="00Dbn00000ohwlV">
+    <input type="hidden" name="retURL" value="https://www.google.com">
+
+    <div class="form-grid">
+
+        <div>
+            <label>First Name</label>
+            <input type="text" name="first_name">
+        </div>
+
+        <div>
+            <label>Last Name</label>
+            <input type="text" name="last_name" required>
+        </div>
+
+        <div>
+            <label>Email</label>
+            <input type="email" name="email">
+        </div>
+
+        <div>
+            <label>Phone</label>
+            <input type="text" name="phone">
+        </div>
+
+        <div>
+            <label>Company</label>
+            <input type="text" name="company" required>
+        </div>
+
+        <div>
+            <label>City</label>
+            <input type="text" name="city">
+        </div>
+
+        <div class="full-width">
+            <label>Street Address</label>
+            <textarea name="street"></textarea>
+        </div>
+
+        <div>
+            <label>Zip Code</label>
+            <input type="text" name="zip">
+        </div>
+
+        <div>
+            <label>State / Province</label>
+            <input type="text" name="state">
+        </div>
+
+        <div>
+            <label>Country</label>
+            <input type="text" name="country">
+        </div>
+
+        <div>
+            <label>Rating</label>
+            <select name="rating">
+                <option value="">Select Rating</option>
+                <option value="Hot">Hot</option>
+                <option value="Warm">Warm</option>
+                <option value="Cold">Cold</option>
+            </select>
+        </div>
+
+        <div class="full-width">
+            <label>Lead Source</label>
+            <select name="lead_source">
+                <option value="">Select Source</option>
+                <option value="Web">Web</option>
+                <option value="Phone Inquiry">Phone Inquiry</option>
+                <option value="Partner Referral">Partner Referral</option>
+                <option value="Purchased List">Purchased List</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <div class="full-width">
+            <button type="submit">Submit Lead</button>
+        </div>
+
+    </div>
+</form>
+```
+
+</div>
+
+</body>
+</html>
