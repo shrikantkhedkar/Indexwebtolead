@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.45)
+    ),
+    url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=1920')
+    center center/cover no-repeat;
+    padding:20px;
+}
+
+.card{
+    background:rgba(255,255,255,0.95);
+    backdrop-filter:blur(10px);
+    width:100%;
+    max-width:650px;
+    padding:50px 40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,0.25);
+    animation:fadeIn 0.8s ease-in-out;
+}
+
+.checkmark{
+    width:100px;
+    height:100px;
+    margin:0 auto 25px;
+    border-radius:50%;
+    background:#28a745;
+    color:#fff;
+    font-size:55px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 8px 20px rgba(40,167,69,0.3);
+}
+
+h1{
+    font-size:42px;
+    color:#222;
+    margin-bottom:15px;
+}
+
+.message{
+    color:#555;
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:12px;
+}
+
+.highlight{
+    color:#ff7f3f;
+    font-weight:bold;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:15px 35px;
+    background:#ff7f3f;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    font-size:16px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#f36c28;
+    transform:translateY(-2px);
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:768px){
+
+    .card{
+        padding:40px 25px;
+    }
+
+    h1{
+        font-size:32px;
+    }
+
+    .message{
+        font-size:16px;
+    }
+
+    .checkmark{
+        width:80px;
+        height:80px;
+        font-size:45px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+
+    <div class="checkmark">✓</div>
+
+    <h1>Thank You!</h1>
+
+    <p class="message">
+        Your information has been submitted successfully.
+    </p>
+
+    <p class="message">
+        Our team has received your request and will contact you shortly.
+    </p>
+
+    <p class="message">
+        We appreciate your interest and look forward to assisting you.
+    </p>
+
+    <a href="/" class="btn">Back to Home</a>
+
+</div>
+
+</body>
+</html>
